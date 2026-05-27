@@ -34,4 +34,14 @@ class Producto {
         }
         return false; // Si hubo un error
     }
+    // Método para listar todos los productos (Listado)
+    public function listar() {
+        // Consulta SQL para traer todo ordenado por ID descendente
+        $query = "SELECT id, nombre, descripcion, precio, stock FROM " . $this->table_name . " ORDER BY id DESC";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        
+        return $stmt; // Retorna el objeto con los resultados
+    }
 }
