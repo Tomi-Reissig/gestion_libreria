@@ -65,4 +65,20 @@ class Producto {
         }
         return false;
     }
-}
+    // Método para eliminar un registro (Baja)
+    public function eliminar() {
+        $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
+        
+        $stmt = $this->conn->prepare($query);
+
+        // Sanitizamos el ID
+        $this->id = htmlspecialchars(strip_tags($this->id));
+
+        // Ejecutamos pasando solo el ID
+        if ($stmt->execute([$this->id])) {
+            return true;
+        }
+        return false;
+    }
+} // Fin de la clase Producto
+?>
