@@ -44,4 +44,25 @@ class Producto {
         
         return $stmt; // Retorna el objeto con los resultados
     }
+    // Método para actualizar los datos de un producto (Modificación)
+    public function actualizar() {
+        $query = "UPDATE " . $this->table_name . " 
+                  SET nombre = ?, descripcion = ?, precio = ?, stock = ? 
+                  WHERE id = ?";
+        
+        $stmt = $this->conn->prepare($query);
+
+        // Sanitización de seguridad
+        $this->nombre = htmlspecialchars(strip_tags($this->nombre));
+        $this->descripcion = htmlspecialchars(strip_tags($this->descripcion));
+        $this->precio = htmlspecialchars(strip_tags($this->precio));
+        $this->stock = htmlspecialchars(strip_tags($this->stock));
+        $this->id = htmlspecialchars(strip_tags($this->id));
+
+        // Ejecutamos pasando las variables (el ID va al final por el orden del WHERE)
+        if ($stmt->execute([$this->nombre, $this->descripcion, $this->precio, $this->stock, $this->id])) {
+            return true;
+        }
+        return false;
+    }
 }
