@@ -32,15 +32,23 @@ session_start();
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                <li class="nav-item me-3 text-white">
-                    👤 <?php echo $_SESSION['usuario']; ?>
-                </li>
-
-                <li class="nav-item">
-                    <a href="logout.php" class="btn btn-danger btn-sm">
-                        Cerrar sesión
-                    </a>
-                </li>
+                <?php if (isset($_SESSION['usuario'])): ?>
+                    <li class="nav-item me-3 text-white">
+                        👤 <?php echo $_SESSION['usuario']; ?>
+                    </li>
+                    <li class="nav-item">
+                        <a href="logout.php" class="btn btn-danger btn-sm">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item me-2">
+                        <a href="login.php" class="btn btn-outline-light btn-sm">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registro.php" class="btn btn-success btn-sm">Registrarse</a>
+                    </li>
+                <?php endif; ?>
 
             </ul>
 
