@@ -14,6 +14,7 @@ $producto = new Producto($db);
 
 $stmt = $producto->listar(); 
 
+include 'includes/header.php';
 ?>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
