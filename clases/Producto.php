@@ -1,8 +1,8 @@
 <?php
 class Producto {
-    // 1. Atributos privados (Encapsulamiento)
+    // 1. Agregamos atributos 
     private $conn;
-    private $table_name = "productos"; // Nombre de la tabla en la BD
+    private $table_name = "productos"; // Nombre de la tabla de base de datos
 
     public $id;
     public $nombre;
