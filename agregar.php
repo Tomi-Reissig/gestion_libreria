@@ -8,7 +8,7 @@ $database = new Database();
 $db = $database->getConnection();
 $producto = new Producto($db);
 
-// 3. Verificamos si el usuario apretó el botón de enviar (POST)
+// 3. Verificamos si el usuario apretó el botón de enviar
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Le asignamos a los atributos de clase 
