@@ -1,5 +1,22 @@
 <?php include 'includes/header.php'; ?>
 
+<?php
+
+include_once 'clases/Database.php';
+include_once 'clases/Producto.php';
+
+
+$database = new Database();
+$db = $database->getConnection(); 
+
+
+$producto = new Producto($db);
+
+
+$stmt = $producto->listar(); 
+
+?>
+
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2>Listado de Libros</h2>
 
