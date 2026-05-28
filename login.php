@@ -58,4 +58,4 @@ include 'includes/header.php'; // Incluye menú, Bootstrap y comienzo del HTML
     </div>
 </div>
 
-[cite_start]<?php include 'includes/footer.php';[cite: 52]?>
+<?php include 'includes/footer.php';?>
