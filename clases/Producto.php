@@ -65,7 +65,7 @@ class Producto {
         }
         return false;
     }
-    // Método para eliminar un registro (Baja)
+    // Agregamos la funcion de eliminar
     public function eliminar() {
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
         
@@ -80,5 +80,5 @@ class Producto {
         }
         return false;
     }
-} // Fin de la clase Producto
+} 
 ?>
