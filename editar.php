@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/verificar_sesion.php';
 include 'includes/header.php';
 
 require_once 'clases/Database.php';

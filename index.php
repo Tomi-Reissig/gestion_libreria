@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/verificar_sesion.php';
 // Activamos visualización de errores por si hay fallos con la conexión
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
