@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Se pregunta si se envió el form
         $tipo_alerta = "danger"; // Alerta roja de Bootstrap 
     }
 }
-
+$ocultar_accesos = true;
 include 'includes/header.php'; // Incluye el menú y el inicio del HTML
 ?>
 

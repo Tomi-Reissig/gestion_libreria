@@ -48,8 +48,12 @@ session_start();
                 </span>
                 <a class="btn btn-danger btn-sm" href="logout.php">Cerrar sesión</a>
             <?php else: ?>
-                <a class="nav-link text-white me-3" href="login.php">Iniciar Sesión</a>
-                <a class="nav-link text-white" href="registro.php">Registrarse</a>
+                
+                <?php if (!isset($ocultar_accesos) || $ocultar_accesos !== true): ?>
+                    <a class="nav-link text-white me-3" href="login.php">Iniciar Sesión</a>
+                    <a class="nav-link text-white" href="registro.php">Registrarse</a>
+                <?php endif; ?>
+
             <?php endif; ?>
         </div>
 

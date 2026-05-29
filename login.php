@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Correo electrónico o contraseña incorrectos."; // Guarda mensaje de error
     }
 }
-
+$ocultar_accesos = true;
 include 'includes/header.php'; // Incluye menú, Bootstrap y comienzo del HTML
 ?>
 
