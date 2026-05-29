@@ -1,5 +1,4 @@
 <?php
-require_once 'verificar_sesion.php'; 
 // 1. Activamos errores para ver si la base de datos rechaza la consulta
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);

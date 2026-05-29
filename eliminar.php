@@ -1,5 +1,4 @@
 <?php
-require_once 'verificar_sesion.php'; 
 // Agregamos las clases
 include_once 'clases/Database.php';
 include_once 'clases/Producto.php';
